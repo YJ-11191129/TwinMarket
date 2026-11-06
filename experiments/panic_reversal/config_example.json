@@ -1,0 +1,13 @@
+{
+  "agents": 32,
+  "assets": 8,
+  "steps": 90,
+  "shock_step": 30,
+  "shock_size": 0.12,
+  "stress_duration": 10,
+  "recovery_steps": 10,
+  "lookback": 5,
+  "horizons": [1, 5, 20],
+  "cost_bps_per_side": [0, 10, 30],
+  "value_anchor": 0.6
+}

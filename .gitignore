@@ -60,3 +60,7 @@ config/embedding.yaml
 # *.yml
 
 logs*/data/guba_data.csv
+
+# Offline synthetic panic mechanism experiments
+experiments/panic_reversal/outputs*/
+
