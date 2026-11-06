@@ -1,0 +1,2 @@
+# Validation environment: CPython 3.12.14. NumPy 2.3.5 requires Python >=3.11.
+numpy==2.3.5

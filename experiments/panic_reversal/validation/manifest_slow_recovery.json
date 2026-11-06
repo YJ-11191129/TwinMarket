@@ -1,0 +1,78 @@
+{
+  "evidence_level": "UNCALIBRATED_SYNTHETIC_MECHANISM_EXPERIMENT",
+  "config": {
+    "agents": 32,
+    "assets": 8,
+    "steps": 90,
+    "shock_step": 30,
+    "shock_size": 0.12,
+    "stress_duration": 10,
+    "recovery_steps": 1000,
+    "lookback": 5,
+    "horizons": [
+      1,
+      5,
+      20
+    ],
+    "cost_bps_per_side": [
+      0.0,
+      10.0,
+      30.0
+    ],
+    "agent_fee_bps": 2.0,
+    "impact": 0.045,
+    "depth_fraction": 0.035,
+    "value_anchor": 0.6,
+    "emotion_decay": 0.82,
+    "panic_threshold": 0.35,
+    "disagreement_cuts": [
+      0.02,
+      0.06
+    ],
+    "seed": 42
+  },
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "mechanisms": [
+    "information",
+    "liquidity",
+    "herding",
+    "deleveraging"
+  ],
+  "controls": [
+    "baseline",
+    "no_social",
+    "homogeneous",
+    "random_emotion",
+    "simple_rule",
+    "no_shock"
+  ],
+  "logs": "none",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "source_sha256": "53c30dcf6c647b8557f226b490846d6df1bc28ae257a3621a9298f4c3b44fd35",
+  "git_head": "87b1f365020ce6abefac0370706fb0f607e6cc02",
+  "git_head_note": "Local checkout HEAD may predate uncommitted experiment files; source_sha256 identifies executed Python sources",
+  "twinmarket_interface_baseline": "de5f2446fcba0d0aba533a6adaede034160e29b4",
+  "snapshot_sha256": null,
+  "units": "one step = one stylized trading day; not calibrated to seconds or Tick events",
+  "execution": "signal close t; enter close t+1; exit close t+1+h; independent overlapping cohorts",
+  "costs": "constant bps per notional leg; L/S gross exposure 2; no borrow fees/fill constraints",
+  "uncertainty": "bootstrap independent seed means, NOT overlapping days; descriptive Monte Carlo intervals",
+  "limitations": [
+    "not an A-share exchange replica",
+    "fractional shares and synthetic dealer quotes",
+    "no real-data calibration",
+    "no realized portfolio or tradable alpha claim",
+    "latent stage/disagreement unavailable from price data alone",
+    "simple cost stress test only"
+  ],
+  "elapsed_seconds": 14.365,
+  "completed_runs": 120,
+  "completed": true
+}

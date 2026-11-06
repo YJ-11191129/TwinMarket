@@ -32,6 +32,10 @@ bash script/run.sh
 
 ## 📝 开发指南
 
+### 离线恐慌机制与反转实验
+
+新增不依赖模型 API 的小规模实验：区分信息冲击、流动性压力、羊群传播和强制去杠杆，记录信念与被动交易，并通过配对对照评估反转因子的未来条件收益。它是未经真实数据校准的机制实验，不代表现实交易 Alpha。运行方式、日频/Tick 字段与 TwinMarket 适配边界见 [实验说明](experiments/panic_reversal/README.md)。
+
 ### 扩展交易策略
 
 在 `trader/trading_agent.py` 中实现新的交易策略：
@@ -80,3 +84,4 @@ def calculate_custom_metric(trades):
 ## 📄 许可证
 
 本项目采用 MIT License，详见 `LICENSE`。
+
